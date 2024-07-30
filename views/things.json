@@ -1,0 +1,141 @@
+[
+    {
+        "id":"1",
+        "p_name": "Apple",
+        "price": 2.99
+    },
+    {
+       "id":"2",
+        "p_name": "Banana",
+        "price": 2.99 
+    },
+    {
+        "id":"3",
+        "p_name": "Orange",
+        "price": 2.99 
+    },
+    {
+        "id":"4",
+        "p_name": "Avocado",
+        "price": 2.99 
+    },
+    {
+        "id":"5",
+        "p_name": "Pineapple",
+        "price": 2.99 
+    },
+    {
+        "id":"6",
+        "p_name": "Mango",
+        "price": 2.99 
+    },
+    {
+        "id":"7",
+        "p_name": "Potatoes",
+        "price": 2.99 
+    },
+    {
+        "id":"8",
+        "p_name": "Brocolli",
+        "price": 2.99 
+    },
+    {
+        "id":"9",
+        "p_name": "Carrot",
+        "price": 2.99 
+    }
+
+
+    {
+        "id":"10",
+        "p_name": "Noise Pulse 4 Max Smart Watch",
+        "price": 2.99
+    },
+    {
+       "id":"11",
+        "p_name": "Canon MAXIFY MegaTank Printer",
+        "price": 2.99 
+    },
+    {
+        "id":"12",
+        "p_name": "Canon EOS R10 Camera",
+        "price": 2.99 
+    },
+    {
+        "id":"13",
+        "p_name": "Eureka Forbes Vogue Super Silent Vacuum cleaner",
+        "price": 2.99 
+    },
+    {
+        "id":"14",
+        "p_name": "Borosil Health Pro Cold Press Slow Juicer",
+        "price": 2.99 
+    },
+    {
+        "id":"15",
+        "p_name": "iPad (10th generation)",
+        "price": 2.99 
+    },
+    {
+        "id":"16",
+        "p_name": "M3 MacbookAir",
+        "price": 2.99 
+    },
+    {
+        "id":"17",
+        "p_name": "Impex Electric Steam Iron Box with Water Spray Function",
+        "price": 2.99 
+    },
+    {
+        "id":"18",
+        "p_name": "Iphone 13",
+        "price": 2.99 
+    }
+
+    {
+        "id":"19",
+        "p_name": "Apples",
+        "price": 2.99
+    },
+    {
+        "id":"20",
+        "p_name": "Bananas",
+        "price": 2.99 
+    },
+    {
+        "id":"21",
+        "p_name": "Tomatoes",
+        "price": 2.99 
+    },
+    {
+        "id":"22",
+        "p_name": "Lettuce",
+        "price": 2.99 
+    },
+    {
+        "id":"23",
+        "p_name": "Onions",
+        "price": 2.99 
+    },
+    {
+        "id":"24",
+        "p_name": "Potatoes",
+        "price": 2.99 
+    },
+    {
+        "id":"25",
+        "p_name": "Eggs",
+        "price": 2.99 
+    },
+    {
+        "id":"26",
+        "p_name": "Chicken breasts",
+        "price": 2.99 
+    },
+    {
+        "id":"27",
+        "p_name": "Rice",
+        "price": 2.99 
+    }
+    
+]
