@@ -2,140 +2,141 @@
     {
         "id":"1",
         "p_name": "Apple",
-        "price": 2.99
+        "price": 14.00
+
     },
     {
        "id":"2",
         "p_name": "Banana",
-        "price": 2.99 
+        "price": 12.00
+ 
     },
     {
         "id":"3",
         "p_name": "Orange",
-        "price": 2.99 
+        "price": 18.00 
     },
     {
         "id":"4",
         "p_name": "Avocado",
-        "price": 2.99 
+        "price": 49.00
     },
     {
         "id":"5",
         "p_name": "Pineapple",
-        "price": 2.99 
+        "price": 27.00 
     },
     {
         "id":"6",
         "p_name": "Mango",
-        "price": 2.99 
+        "price": 24.00
     },
     {
         "id":"7",
         "p_name": "Potatoes",
-        "price": 2.99 
+        "price": 38.00
     },
     {
         "id":"8",
         "p_name": "Brocolli",
-        "price": 2.99 
+        "price": 44.00
     },
     {
         "id":"9",
         "p_name": "Carrot",
-        "price": 2.99 
+        "price": 22.00
     }
-
-
+    
     {
         "id":"10",
         "p_name": "Noise Pulse 4 Max Smart Watch",
-        "price": 2.99
+        "price": 3999
     },
     {
        "id":"11",
         "p_name": "Canon MAXIFY MegaTank Printer",
-        "price": 2.99 
+        "price": 20000
     },
     {
         "id":"12",
         "p_name": "Canon EOS R10 Camera",
-        "price": 2.99 
+        "price": 96000
     },
     {
         "id":"13",
         "p_name": "Eureka Forbes Vogue Super Silent Vacuum cleaner",
-        "price": 2.99 
+        "price": 9000
     },
     {
         "id":"14",
         "p_name": "Borosil Health Pro Cold Press Slow Juicer",
-        "price": 2.99 
+        "price": 12000 
     },
     {
         "id":"15",
         "p_name": "iPad (10th generation)",
-        "price": 2.99 
+        "price": 44900
     },
     {
         "id":"16",
         "p_name": "M3 MacbookAir",
-        "price": 2.99 
+        "price": 114900
     },
     {
         "id":"17",
         "p_name": "Impex Electric Steam Iron Box with Water Spray Function",
-        "price": 2.99 
+        "price": 1299 
     },
     {
         "id":"18",
         "p_name": "Iphone 13",
-        "price": 2.99 
+        "price": 69900
     }
 
     {
         "id":"19",
-        "p_name": "Apples",
-        "price": 2.99
+        "p_name": "Indigo Cotton Printed Shirt",
+        "price": 599.00
     },
     {
         "id":"20",
-        "p_name": "Bananas",
-        "price": 2.99 
+        "p_name": "Black Cotton Kalamkari Maxi Skirt",
+        "price": 999.00
     },
     {
         "id":"21",
-        "p_name": "Tomatoes",
-        "price": 2.99 
+        "p_name": "Brown Cotton Comfort Fit Drawstring Pants",
+        "price": 899.00
     },
     {
         "id":"22",
-        "p_name": "Lettuce",
-        "price": 2.99 
+        "p_name": "Orange Cotton Dabu Printed Shirt",
+        "price": 799.00 
     },
     {
         "id":"23",
-        "p_name": "Onions",
-        "price": 2.99 
+        "p_name": "Grey Cotton Printed Kurta Short",
+        "price": 450.00 
     },
     {
         "id":"24",
-        "p_name": "Potatoes",
-        "price": 2.99 
+        "p_name": "Aqua Cotton Printed Kurta Short",
+        "price": 450.00 
     },
     {
         "id":"25",
-        "p_name": "Eggs",
-        "price": 2.99 
+        "p_name": "Pink Cotton Silk Embroidered Ijar & Kurta Set",
+        "price": 799.00 
     },
     {
         "id":"26",
-        "p_name": "Chicken breasts",
-        "price": 2.99 
+        "p_name": "Navy Cotton Slim Fit Pants",
+        "price": 799.00 
     },
     {
         "id":"27",
-        "p_name": "Rice",
-        "price": 2.99 
+        "p_name": "FabNu Black Cotton Linen Skirt",
+        "price": 999.00 
     }
     
 ]

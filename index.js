@@ -4,10 +4,39 @@ import bodyParser from "body-parser";
 
 const app = express();
 const port = 3010;
-const thingJson = '[{"id":"1","p_name": "Apple","price": 14.00 },{"id":"2","p_name": "Banana","price": 12.00},{"id":"3","p_name": "Orange","price": 18.00},{"id":"4","p_name": "Avocado","price": 49.00 },{"id":"5","p_name": "Pineapple","price": 27.00 },{"id":"6","p_name": "Mango","price": 24.00 },{"id":"7","p_name": "Potatoes","price": 38.00 },{"id":"8","p_name": "Brocolli","price": 44.00 },{"id":"9","p_name": "Carrot","price": 22.00},{"id":"10","p_name": "Noise Pulse 4 Max Smart Watch","price": 2.99},{"id":"2","p_name": "Canon MAXIFY MegaTank Printer","price": 2.99 },{"id":"3","p_name": "Canon EOS R10 Camera","price": 2.99 },{"id":"4","p_name": "Eureka Forbes Vogue Super Silent Vacuum cleaner","price": 2.99 },{"id":"5","p_name": "Borosil Health Pro Cold Press Slow Juicer","price": 2.99 },{"id":"6","p_name": "iPad (10th generation)","price": 2.99 },{"id":"7","p_name": "M3 MacbookAir","price": 2.99 },{"id":"8","p_name": "Impex Electric Steam Iron Box with Water Spray Function","price": 2.99 },{"id":"9","p_name": "Iphone 13","price": 2.99},{"id":"10","p_name": "Indigo Cotton Printed Shirt","price": 2.99},{"id":"2","p_name": "Black Cotton Kalamkari Maxi Skirt","price": 2.99 },{"id":"3","p_name": "Brown Cotton Comfort Fit Drawstring Pants","price": 2.99 },{"id":"4","p_name": "Orange Cotton Dabu Printed Shirt","price": 2.99 },{"id":"5","p_name": "Grey Cotton Printed Kurta Short","price": 2.99 },{"id":"6","p_name": "Aqua Cotton Printed Kurta Short","price": 2.99 },{"id":"7","p_name": "Pink Cotton Silk Embroidered Ijar & Kurta Set","price": 2.99 },{"id":"8","p_name": "Navy Cotton Slim Fit Pants","price": 2.99 },{"id":"9","p_name": "FabNu Black Cotton Linen Skirt","price": 2.99}]';
+const thingJson = '[{"id":"1","p_name": "Apple","price":  14.00 },{"id":"2","p_name": "Banana","price": 12.00},{"id":"3","p_name": "Orange","price": 18.00},{"id":"4","p_name": "Avocado","price": 49.00 },{"id":"5","p_name": "Pineapple","price": 27.00 },{"id":"6","p_name": "Mango","price": 24.00 },{"id":"7","p_name": "Potatoes","price": 38.00 },{"id":"8","p_name": "Brocolli","price": 44.00 },{"id":"9","p_name": "Carrot","price": 22.00},{"id":"10","p_name": "Noise Pulse 4 Max Smart Watch","price": 3999},{"id":"2","p_name": "Canon MAXIFY MegaTank Printer","price": 2000 },{"id":"3","p_name": "Canon EOS R10 Camera","price": 96000 },{"id":"4","p_name": "Eureka Forbes Vogue Super Silent Vacuum cleaner","price": 9000 },{"id":"5","p_name": "Borosil Health Pro Cold Press Slow Juicer","price": 12000 },{"id":"6","p_name": "iPad (10th generation)","price": 44900 },{"id":"7","p_name": "M3 MacbookAir","price": 114900 },{"id":"8","p_name": "Impex Electric Steam Iron Box with Water Spray Function","price": 1299 },{"id":"9","p_name": "Iphone 13","price": 69900},{"id":"10","p_name": "Indigo Cotton Printed Shirt","price": 599.00},{"id":"2","p_name": "Black Cotton Kalamkari Maxi Skirt","price": 999.00},{"id":"3","p_name": "Indigo Cotton Dabu Printed Regular Shirt","price": 899.00 },{"id":"4","p_name": "Orange Cotton Dabu Printed Shirt","price": 799.00 },{"id":"5","p_name": "Grey Cotton Printed Kurta Short","price": 450.00 },{"id":"6","p_name": "Aqua Cotton Printed Kurta Short","price": 450.00 },{"id":"7","p_name": "Pink Cotton Silk Embroidered Ijar & Kurta Set","price": 799.00 },{"id":"8","p_name": "Navy Cotton Slim Fit Pants","price": 799.00 },{"id":"9","p_name": "FabNu Black Cotton Linen Skirt","price": 999.00}]';
 
 
 const arr = [];
+
+/*const db = new pg.Client({
+    user: "postgres",
+    host: "localhost",
+    database: "user",
+    password: "12345678",
+    port: 5432,
+});
+
+const db1 = new pg.Client({
+    user: 'postgres',
+    host: 'localhost',
+    database: 'user',
+    password: '12345678',
+    port: 5432,
+});
+
+const db2 = new pg.Client({
+    user: 'postgres',
+    host: 'localhost',
+    database: 'user',
+    password: '12345678',
+    port: 5432,
+});
+
+db.connect();
+db1.connect();
+db2.connect();
+*/
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -34,6 +63,19 @@ app.get("/electronics", (req, res) => {
 app.get("/cart", (req, res) => {
     res.render("cart.ejs",{item: arr});
 });
+
+app.get("/check", (req, res) => {
+    res.render("check.ejs");
+});
+
+app.get("/review", (req, res) => {
+    res.render("review.ejs",{item: arr});
+});
+
+app.get("/final", (req, res) => {
+    res.render("final.ejs");
+});
+
 
 app.post("/add", (req, res) => {
     
@@ -169,6 +211,41 @@ app.post("/add", (req, res) => {
             break;     
     }
     
+});
+
+app.post("/review", async(req, res) => {
+    const { email, fullname, address } = req.body;
+    try {
+      const text = 'INSERT INTO customer(email, fullname, address) VALUES($1, $2, $3) RETURNING *';
+      const values = [email, fullname, address];
+      const result = await db1.query(text, values);
+      let customerResult = await db1.query('SELECT c_id FROM customer WHERE email = $1', [email]);
+      c_id = customerResult.rows[0].c_id;
+      console.log(result.rows[0]); // Log the inserted row
+      res.render("review.ejs", {item: arr});
+    } catch (err) {
+      console.error(err);
+      res.send('Error inserting data');
+    }
+});
+
+app.post("/final", async (req, res) => {
+    try {
+        // Iterate over the array and insert each item into the database
+        for (const item of arr) {
+            const text = 'INSERT INTO order_items (c_id, p_name, price) VALUES ($1, $2, $3) RETURNING *';
+            const values = [c_id, item.p_name, item.price];
+            const result = await db2.query(text, values);
+            // Log the inserted row to the console
+            console.log(result.rows[0]);
+        }
+        // Render the final review page
+        res.render("final.ejs");
+    } catch (err) {
+        // Handle any errors that occur during the insertion process
+        console.error('Error inserting data into database', err);
+        res.status(500).send('Internal Server Error');
+    }
 });
 
 app.post("/remove", (req, res) => {

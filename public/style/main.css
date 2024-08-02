@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #fffdb8;
+    background-color: #fbf9f1;
 }
 
 .cart-item {
@@ -19,7 +19,7 @@ body {
     align-items: center;
     width: 100%;
     max-width: 600px;
-    background-color: #FFD460;
+    background-color:#EDE8D0 ;
     padding: 20px;
     margin: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -48,7 +48,7 @@ body {
 
 .remove-button {
     flex: 1;
-    background-color:  #FFD460;;
+    background-color:#9FAA90;
     color: #481E14;
     border: none;
     padding: 10px 20px;
@@ -58,7 +58,7 @@ body {
 }
 
 .remove-button:hover {
-    background-color: #fffdb8;
+    background-color: #fbf9f1;
 }
 
 .wrapper {
