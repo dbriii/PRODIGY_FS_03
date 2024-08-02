@@ -9,7 +9,7 @@ const thingJson = '[{"id":"1","p_name": "Apple","price":  14.00 },{"id":"2","p_n
 
 const arr = [];
 
-/*const db = new pg.Client({
+const db = new pg.Client({
     user: "postgres",
     host: "localhost",
     database: "user",
@@ -36,7 +36,7 @@ const db2 = new pg.Client({
 db.connect();
 db1.connect();
 db2.connect();
-*/
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -221,7 +221,7 @@ app.post("/review", async(req, res) => {
       const result = await db1.query(text, values);
       let customerResult = await db1.query('SELECT c_id FROM customer WHERE email = $1', [email]);
       c_id = customerResult.rows[0].c_id;
-      console.log(result.rows[0]); // Log the inserted row
+      console.log(result.rows[0]); 
       res.render("review.ejs", {item: arr});
     } catch (err) {
       console.error(err);
@@ -231,18 +231,18 @@ app.post("/review", async(req, res) => {
 
 app.post("/final", async (req, res) => {
     try {
-        // Iterate over the array and insert each item into the database
+        
         for (const item of arr) {
             const text = 'INSERT INTO order_items (c_id, p_name, price) VALUES ($1, $2, $3) RETURNING *';
             const values = [c_id, item.p_name, item.price];
             const result = await db2.query(text, values);
-            // Log the inserted row to the console
+            
             console.log(result.rows[0]);
         }
-        // Render the final review page
+        
         res.render("final.ejs");
     } catch (err) {
-        // Handle any errors that occur during the insertion process
+        
         console.error('Error inserting data into database', err);
         res.status(500).send('Internal Server Error');
     }
@@ -256,7 +256,7 @@ app.post("/remove", (req, res) => {
     if (index === -1) {
       console.log('Product not found');
     } else {
-      arr.splice(index, 1); // Remove 1 element at the found index
+      arr.splice(index, 1); 
       res.redirect("/cart"); 
     }
   });
