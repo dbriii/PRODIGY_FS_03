@@ -8,7 +8,7 @@ const thingJson = '[{"id":"1","p_name": "Apple","price":  14.00 },{"id":"2","p_n
 
 
 const arr = [];
-
+/*
 const db = new pg.Client({
     user: "postgres",
     host: "localhost",
@@ -37,7 +37,7 @@ db.connect();
 db1.connect();
 db2.connect();
 
-
+*/
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
@@ -213,6 +213,7 @@ app.post("/add", (req, res) => {
     
 });
 
+/*
 app.post("/review", async(req, res) => {
     const { email, fullname, address } = req.body;
     try {
@@ -247,6 +248,8 @@ app.post("/final", async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 });
+*/
+
 
 app.post("/remove", (req, res) => {
     console.log(arr);

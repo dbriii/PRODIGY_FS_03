@@ -48,8 +48,8 @@ body {
 
 .remove-button {
     flex: 1;
-    background-color:#9FAA90;
-    color: #481E14;
+    background-color:#2A6049;
+    color: #fbf9f1;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -57,9 +57,7 @@ body {
     
 }
 
-.remove-button:hover {
-    background-color: #fbf9f1;
-}
+
 
 .wrapper {
     display: flex;

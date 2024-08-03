@@ -7,17 +7,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 </head>
+<style>
+     .right-indent {
+      display: flex;
+            justify-content: flex-end;
+            padding: 10px;    
+          
+        }
+            
+      
+</style>
 
 
 <body class="justify-content-center" style="background-color:#2A6049;">
     <div class="container my-5" >
+      <div class="right-indent">
+      <h2 style="color: lightyellow;" class="mx-5"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentcolor" class="bi bi-cart4" viewBox="0 0 16 16">
+        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+      </svg>greenmart</h2>
+      </div>
     <div class="col-md-7 col-lg-8">
-        <h4 class="mb-3" style="color: #FBF9F1;">Billing address</h4>
+        <h4 class="mb-3" style="color: lightyellow">Billing address</h4>
         <form class="needs-validation" novalidate="">
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label"  style="color: #FBF9F1;">Full name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" style="background-color:lightyellow;" required="">
               <div class="invalid-feedback">
                 Valid first name is required.
               </div>
@@ -27,15 +42,15 @@
 
             <div class="col-12">
               <label for="email" class="form-label" style="color: #FBF9F1;">Email <span class="text-body-secondary" style="color: #FBF9F1;"  ></span></label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com " required="">
+              <input type="email" class="form-control" id="email" placeholder="you@example.com " style="background-color:lightyellow;"  required="">
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
               </div>
             </div>
 
             <div class="col-12">
-              <label for="address" class="form-label" style="color: #FBF9F1;">Address</label>
-              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+              <label for="address" class="form-label" style="color: #FBF9F1;" >Address</label>
+              <input type="text" class="form-control" id="address" placeholder="1234 Main St" style="background-color: lightyellow;" required="">
               <div class="invalid-feedback">
                 Please enter your shipping address.
               </div>
@@ -44,8 +59,10 @@
     
 
             <div class="col-md-5">
-              <label for="country" class="form-label" style="color: #FBF9F1;">Country</label>
-              <select class="form-select" id="country" required="">
+              <label for="country" class="form-label" style="color: white;">
+                Country
+            </label>
+                          <select class="form-select" id="country" style="background-color: lightyellow;" required="">
                 <option value="">Choose...</option>
                 <option>United States</option>
                 <option>United States</option>
@@ -57,8 +74,8 @@
             </div>
 
             <div class="col-md-4">
-              <label for="state" class="form-label" style="color: #FBF9F1;">State</label>
-              <select class="form-select" id="state" required="">
+              <label for="state" class="form-label" style="color: #fbf9f1;">State</label>
+              <select class="form-select" id="state" style="background-color: lightyellow;" required="">
                 <option value="">Choose...</option>
                 <option>California</option>
                 <option>California</option>
@@ -72,7 +89,7 @@
 
             <div class="col-md-3">
               <label for="zip" class="form-label" style="color: #FBF9F1;">Zip</label>
-              <input type="text" class="form-control" id="zip" placeholder="" required="">
+              <input type="text" class="form-control" id="zip" placeholder="" style="background-color:lightyellow;" required="">
               <div class="invalid-feedback">
                 Zip code required.
               </div>
@@ -86,15 +103,15 @@
 
           <div class="my-3">
             <div class="form-check" style="color: #FBF9F1;">
-              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" style="background-color:lightyellow;" checked="" required="">
               <label class="form-check-label" for="credit">Credit card</label>
             </div>
             <div class="form-check" style="color: #FBF9F1;">
-              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" style="background-color:lightyellow;"  required="">
               <label class="form-check-label" for="debit">Debit card</label>
             </div>
             <div class="form-check" style="color: #FBF9F1;">
-              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
+              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" style="background-color:lightyellow;" required="">
               <label class="form-check-label" for="paypal">PayPal</label>
             </div>
           </div>
@@ -102,8 +119,7 @@
           <div class="row gy-3">
             <div class="col-md-6">
               <label for="cc-name" class="form-label" style="color: #FBF9F1;">Name on card</label>
-              <input type="text" class="form-control" id="cc-name" placeholder="" required="">
-              <small class="text-body-secondary">Full name as displayed on card</small>
+              <input type="text" class="form-control" id="cc-name" placeholder="" style="background-color:lightyellow;"  required="">
               <div class="invalid-feedback">
                 Name on card is required
               </div>
@@ -111,7 +127,7 @@
 
             <div class="col-md-6">
               <label for="cc-number" class="form-label" style="color: #FBF9F1;">Credit card number</label>
-              <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+              <input type="text" class="form-control" id="cc-number" placeholder="" style="background-color:lightyellow;"  required="">
               <div class="invalid-feedback">
                 Credit card number is required
               </div>
@@ -119,7 +135,7 @@
 
             <div class="col-md-3">
               <label for="cc-expiration" class="form-label" style="color: #FBF9F1;">Expiration</label>
-              <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+              <input type="text" class="form-control" id="cc-expiration" placeholder="" style="background-color:lightyellow;"  required="">
               <div class="invalid-feedback">
                 Expiration date required
               </div>
@@ -127,16 +143,19 @@
 
             <div class="col-md-3">
               <label for="cc-cvv" class="form-label" style="color: #FBF9F1;">CVV</label>
-              <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+              <input type="text" class="form-control" id="cc-cvv" placeholder="" style="background-color:lightyellow;"  required="">
               <div class="invalid-feedback">
                 Security code required
               </div>
             </div>
           </div>
+          
 
           <hr class="my-4">
 
-          <button class="w-100 btn btn-primary btn-lg" formaction="/review" formmethod="post" type="submit">Continue to checkout</button>
+          <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2" formaction="/review" formmethod="post"  style="background-color: #9faa90; color: #FBF9F1;">Check Out</button>      
+
+
         </form>
       </div>
     </div>
